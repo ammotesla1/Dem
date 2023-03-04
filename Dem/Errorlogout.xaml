@@ -1,0 +1,29 @@
+﻿<Window x:Class="Dem.Errorlogout"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dem"
+        mc:Ignorable="d"
+        Title="Errorlogout" Height="450" Width="800">
+    <Grid>
+        <Label Content="No logout detected for your last login 06/07/2017 at 08:22" HorizontalAlignment="Left" Margin="49,23,0,0" VerticalAlignment="Top" FontSize="22"/>
+
+        <Label Content="Reason:" HorizontalAlignment="Left" Margin="49,67,0,0" VerticalAlignment="Top" FontSize="22"/>
+        <Button HorizontalAlignment="Left" Margin="554,334,0,0" VerticalAlignment="Top" Width="150" Height="38">
+            <TextBlock FontSize="22">Confirm</TextBlock>
+        </Button>
+        <RadioButton Content="Software Crash" HorizontalAlignment="Left" Margin="71,341,0,0" VerticalAlignment="Top">
+            <RadioButton.RenderTransform>
+                <ScaleTransform ScaleX="1.78" ScaleY="1.78"></ScaleTransform>
+            </RadioButton.RenderTransform>
+        </RadioButton>
+        <RadioButton Content="Software Crash" HorizontalAlignment="Left" Margin="300,342,0,0" VerticalAlignment="Top">
+            <RadioButton.RenderTransform>
+                <ScaleTransform ScaleX="1.78" ScaleY="1.78"/>
+            </RadioButton.RenderTransform>
+        </RadioButton>
+        <TextBox HorizontalAlignment="Left" Height="208" Margin="62,111,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="642" FontSize="16" IsReadOnly="True"/>
+
+    </Grid>
+</Window>

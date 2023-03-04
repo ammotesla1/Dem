@@ -1,0 +1,68 @@
+﻿<Window x:Class="Dem.Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dem"
+        mc:Ignorable="d"
+        Title="Menu" Height="450" Width="800">
+    <Grid>
+        <Grid x:Name="AdminGrid" Visibility="Visible">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="15*"/>
+            </Grid.RowDefinitions>
+
+            <Menu Grid.Row="0" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="694">
+                <MenuItem Header="Add user" Height="25"></MenuItem>
+                <MenuItem Header="Exit" Height="25"></MenuItem>
+            </Menu>
+
+            <Grid Grid.Row="1">
+                <Label Content="Office:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <ComboBox Width="200" Height="25" Margin="59,11,435,359">
+                    <ComboBoxItem>All offices</ComboBoxItem>
+                </ComboBox>
+                <DataGrid x:Name="dg_admin_users" Margin="10,52,10,81">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Name" Binding="{Binding FirstName}"/>
+                        <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}"/>
+                        <DataGridTextColumn Header="User Role" Binding="{Binding Roles.Title}"/>
+                        <DataGridTextColumn Header="Email Address" Binding="{Binding Email}"/>
+                        <DataGridTextColumn Header="Office" Binding="{Binding Offices.Title}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <Button Content="Change Role" Height="30" Width="100" Margin="10,326,584,39"/>
+                <Button Height="30" Width="150" Content="Enable/Disable Login" Margin="185,326,359,39"/>
+            </Grid>
+
+        </Grid>
+        <Grid x:Name="UserGrid" Visibility="Hidden">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="15*"/>
+                </Grid.RowDefinitions>
+
+                <Menu Grid.Row="0" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="694">
+                    <MenuItem Header="Exit" Height="25"></MenuItem>
+                </Menu>
+
+                <Grid Grid.Row="1">
+                    <Label Content="Hi [NAME], Welcome to AMONIC Airlines." HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Time spent on system : [SESSIONTIME]" HorizontalAlignment="Left" Margin="228,31,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Number of crashes: [CRUSHCOUNTER]" HorizontalAlignment="Left" Margin="470,31,0,0" VerticalAlignment="Top"/>
+                    <DataGrid x:Name="dg_user_tracking" Margin="10,104,10,52">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding Date}" Header="Date"></DataGridTextColumn>
+                            <DataGridTextColumn Binding="{Binding LoginTime}" Header="Login time"></DataGridTextColumn>
+                            <DataGridTextColumn Binding="{Binding LogoutTime}" Header="Logout time"></DataGridTextColumn>
+                            <DataGridTextColumn Binding="{Binding SpentTime}" Header="Time spent on system"></DataGridTextColumn>
+                            <DataGridTextColumn Binding="{Binding Reasons.nameReason}" Header="Unsuccessful logout reason"></DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,23 @@
+﻿<Window x:Class="Dem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dem"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Image Source="/Images/DS2017_TP09_color.png" HorizontalAlignment="Left" Height="122" Margin="192,22,0,0" VerticalAlignment="Top" Width="401"/>
+        <Label Content="Username:" HorizontalAlignment="Left" Margin="95,183,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="Password:" HorizontalAlignment="Left" Margin="101,239,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="tb_username" HorizontalAlignment="Left" Height="34" Margin="194,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="399" FontSize="18"/>
+        <Button HorizontalAlignment="Left" Margin="225,295,0,0" VerticalAlignment="Top" Width="151" Height="27" Click="Button_Click">
+            <TextBlock FontSize="17">Login</TextBlock>
+        </Button>
+        <TextBox x:Name="tb_password" HorizontalAlignment="Left" Height="34" Margin="194,239,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="399" FontSize="18"/>
+        <Button HorizontalAlignment="Left" Margin="413,295,0,0" VerticalAlignment="Top" Width="151" Height="27" Click="Button_Click_1">
+            <TextBlock FontSize="17"><Run Text="Exit"/></TextBlock>
+        </Button>
+
+    </Grid>
+</Window>
